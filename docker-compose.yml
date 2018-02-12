@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  dns_migration_tools:
+    container_name: dns_migration_tools
+    build: .
+    env_file:
+     - '.env'
+    volumes:
+      - ".:/app"
+    networks:
+      - intranet
+
+networks:
+  intranet:
